@@ -1,0 +1,37 @@
+{
+    "language": "Python",
+    "dependency_file": "requirements.txt",
+    "dependencies": ["numpy", "scipy", "pandas", "matplotlib", "emcee", "pymc3"],
+    "files": [
+        {
+            "path": "src/neutrino_analyzer.py",
+            "description": "Main analyzer class for performing neutrino oscillation analysis and sterile neutrino detection",
+            "exports": ["class NeutrinoAnalyzer", "function analyze_standard_oscillation()", "function check_sterile_neutrino()", "function bayesian_analysis()", "function plot_neutrino_flux()", "function plot_model_comparison()"]
+        },
+        {
+            "path": "src/data_processor.py",
+            "description": "Handles raw data processing, filtering, and calibration for neutrino experiments",
+            "exports": ["class NeutrinoDataProcessor", "function filter_and_calibrate()", "function load_data(file_path)"]
+        },
+        {
+            "path": "src/statistical_models.py",
+            "description": "Implements statistical models for Bayesian analysis and model comparison",
+            "exports": ["function bayesian_inference(data, model)", "function compare_models(model1, model2)", "function calculate_confidence_level(results)"]
+        },
+        {
+            "path": "src/visualization.py",
+            "description": "Visualization tools for plotting neutrino flux and model comparisons",
+            "exports": ["function plot_neutrino_flux(data)", "function plot_model_comparison(models)", "function save_plot(filename)"]
+        },
+        {
+            "path": "src/utils.py",
+            "description": "Utility functions for data handling, error calculations, and formatting outputs",
+            "exports": ["function calculate_uncertainty(flux, uncertainty)", "function format_results(results)", "function validate_input(data)"]
+        },
+        {
+            "path": "src/main.py",
+            "description": "Entry point script demonstrating usage of the analyzer and data processor",
+            "imports_from_other_files": ["neutrino_analyzer.py", "data_processor.py"]
+        }
+    ]
+}
